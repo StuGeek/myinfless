@@ -1,0 +1,22 @@
+// 
+// Decompiled by Procyon v0.5.36
+// 
+
+package org.apache.commons.beanutils.converters;
+
+import java.math.BigInteger;
+
+public final class BigIntegerConverter extends NumberConverter
+{
+    public BigIntegerConverter() {
+        super(false);
+    }
+    
+    public BigIntegerConverter(final Object defaultValue) {
+        super(false, defaultValue);
+    }
+    
+    protected Class getDefaultType() {
+        return BigInteger.class;
+    }
+}

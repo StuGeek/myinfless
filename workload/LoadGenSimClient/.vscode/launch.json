@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "scs.util.rmi.Main",
+            "projectName": "LoadGenSimClient_196fee7",
+            "args": "600 1 9 1800 16 0 true /home/ubuntu/theinf/workload/Periodic.txt /home/ubuntu/theinf/workload/results/ 192.168.230.128 22222"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataFormats",
+            "request": "launch",
+            "mainClass": "scs.util.tools.DataFormats",
+            "projectName": "LoadGenSimClient_196fee7"
+        },
+        {
+            "type": "java",
+            "name": "Launch DateFormats",
+            "request": "launch",
+            "mainClass": "scs.util.tools.DateFormats",
+            "projectName": "LoadGenSimClient_196fee7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Generate",
+            "request": "launch",
+            "mainClass": "scs.util.tools.Generate",
+            "projectName": "LoadGenSimClient_196fee7"
+        }
+    ]
+}

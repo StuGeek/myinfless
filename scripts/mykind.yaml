@@ -1,0 +1,29 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: /home
+        containerPath: /home
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+          node-labels: "ingress-ready=true"
+    extraPortMappings:
+      - containerPort: 80
+        hostPort: 80
+        listenAddress: "0.0.0.0"
+      - containerPort: 433
+        hostPort: 433
+        listenAddress: "0.0.0.0"
+      - containerPort: 31112
+        hostPort: 31112
+        listenAddress: "0.0.0.0"
+      - containerPort: 31212
+        hostPort: 31212
+        listenAddress: "0.0.0.0"
+      - containerPort: 81
+        hostPort: 81
+        listenAddress: "0.0.0.0"
